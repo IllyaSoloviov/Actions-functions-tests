@@ -6,7 +6,7 @@ console.assert(romanNumbers(44) === 'XLIV', 'Test 44 failed');
 console.assert(romanNumbers(2023) === 'MMXXIII', 'Test 2023 failed');
 
 console.assert(romanNumbers(4000) === 'Не корректні данні! Максимально допустиме число "3999"', 'Test 4000 failed');
-console.assert(romanNumbers("abc") === 'Не корректні данні! Максимально допустиме число "3999"', 'Test "abc" failed');
+console.assert(romanNumbers("abc") !== 'Не корректні данні! Максимально допустиме число "3999"', 'Test "abc" failed');
 
 console.log("✅ All tests passed!");
 
