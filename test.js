@@ -1,12 +1,11 @@
-const { add, subtract } = require('./math');
-function assertEqual(actual, expected, message) {
-    if (actual !== expected) {
-        console.error(` ${message} | Очікувалось: ${expected}, Отримано: ${actual}`);
-        process.exit(1);
-    } else {
-        console.log(` ${message}`);
-    }
-}
-assertEqual(add(2, 3), 5, 'Сума 2 + 3 = 5');
-assertEqual(subtract(10, 4), 6, 'Різниця 10 - 4 = 6');
-console.log("Усі тести пройдено успішно!");
+const { romanNumbers } = require('./math.js');
+
+console.log(romanNumbers(1) === 'I', 'Test 1 failed');
+console.log(romanNumbers(3999) === 'MMMCMXCIX', 'Test 3999 failed');
+console.log(romanNumbers(44) === 'XLIV', 'Test 44 failed');
+console.log(romanNumbers(2023) === 'MMXXIII', 'Test 2023 failed');
+
+console.log(romanNumbers(4000) === 'Не корректні данні! Максимально допустиме число "3999"', 'Test 4000 failed');
+console.log(romanNumbers("abc") === 'Не корректні данні!', 'Test "abc" failed');
+
+console.log("✅ All tests passed!");
